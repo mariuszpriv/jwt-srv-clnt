@@ -1,0 +1,4 @@
+keytool -genkeypair -alias mykey -keyalg RSA -keysize 2048 -validity 365 -keystore mykeystore.jks -storepass mypassword -keypass mypassword -dname "CN=localhost, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"
+keytool -selfcert -alias mykey -keystore mykeystore.jks -storepass mypassword -keypass mypassword
+keytool -list -v -keystore mykeystore.jks -storepass mypassword
+
